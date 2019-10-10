@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.termux"
+    package="co.miescuela"
     android:installLocation="internalOnly"
-    android:sharedUserId="com.termux"
+    android:sharedUserId="co.miescuela"
     android:sharedUserLabel="@string/shared_user_label" >
 
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
@@ -30,7 +30,7 @@
         <meta-data android:name="android.max_aspect" android:value="10.0" />
 
         <activity
-            android:name="com.termux.app.TermuxActivity"
+            android:name="co.miescuela.app.TermuxActivity"
             android:label="@string/application_name"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:launchMode="singleTask"
@@ -48,7 +48,7 @@
         </activity>
 
         <activity
-            android:name="com.termux.app.TermuxHelpActivity"
+            android:name="co.miescuela.app.TermuxHelpActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Material.Light.DarkActionBar"
             android:parentActivityName=".app.TermuxActivity"
@@ -56,7 +56,7 @@
             android:label="@string/application_name" />
 
         <activity
-            android:name="com.termux.app.MiescuelaAdminActivity"
+            android:name="co.miescuela.app.MiescuelaAdminActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Material.Light.DarkActionBar"
             android:parentActivityName=".app.TermuxActivity"
@@ -64,9 +64,17 @@
             android:label="@string/application_name" />
 
         <activity
-            android:name="com.termux.filepicker.TermuxFileReceiverActivity"
+            android:name="co.miescuela.app.MiescuelaStreamActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Material.Light.DarkActionBar"
+            android:parentActivityName=".app.TermuxActivity"
+            android:resizeableActivity="true"
+            android:label="@string/application_name" />
+
+        <activity
+            android:name="co.miescuela.filepicker.TermuxFileReceiverActivity"
             android:label="@string/application_name"
-            android:taskAffinity="com.termux.filereceiver"
+            android:taskAffinity="co.miescuela.filereceiver"
             android:excludeFromRecents="true"
             android:resizeableActivity="true"
             android:noHistory="true">
@@ -96,7 +104,7 @@
 
         <activity-alias
             android:name=".HomeActivity"
-            android:targetActivity="com.termux.app.TermuxActivity">
+            android:targetActivity="co.miescuela.app.TermuxActivity">
 
             <!-- Launch activity automatically on boot on Android Things devices -->
             <intent-filter>
@@ -108,7 +116,7 @@
 
         <provider
             android:name=".filepicker.TermuxDocumentsProvider"
-            android:authorities="com.termux.documents"
+            android:authorities="co.miescuela.documents"
             android:grantUriPermissions="true"
             android:exported="true"
             android:permission="android.permission.MANAGE_DOCUMENTS">
@@ -118,16 +126,16 @@
         </provider>
 
         <service
-            android:name="com.termux.app.TermuxService"
+            android:name="co.miescuela.app.TermuxService"
             android:exported="false" />
 
         <receiver android:name=".app.TermuxOpenReceiver" />
 
-        <provider android:authorities="com.termux.files"
+        <provider android:authorities="co.miescuela.files"
                   android:readPermission="android.permission.permRead"
                   android:exported="true"
                   android:grantUriPermissions="true"
-                  android:name="com.termux.app.TermuxOpenReceiver$ContentProvider" />
+                  android:name="co.miescuela.app.TermuxOpenReceiver$ContentProvider" />
 
         <meta-data android:name="com.sec.android.support.multiwindow" android:value="true" />
     </application>

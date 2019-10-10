@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="application_name">Miescuela</string>
-    <string name="shared_user_label">Miescuela user</string>
+    <string name="application_name">Miescuela-server</string>
+    <string name="shared_user_label">Miescuela-server user</string>
     <string name="new_session">New</string>
     <string name="new_session_failsafe">Failsafe</string>
     <string name="toggle_soft_keyboard">Keyboard</string>
@@ -9,7 +9,8 @@
     <string name="style_terminal">Style</string>
     <string name="share_transcript_title">Terminal transcript</string>
     <string name="help">Help</string>
-    <string name="admin">Miescuela Admin</string>
+    <string name="admin">ME Admin</string>
+    <string name="stream">ME Stream</string>
     <string name="toggle_keep_screen_on">Keep screen on</string>
 
     <string name="bootstrap_installer_body">Installing…</string>
@@ -49,4 +50,5 @@
     <string name="file_received_title">Save file in ~/downloads/</string>
     <string name="file_received_edit_button">Edit</string>
     <string name="file_received_open_folder_button">Open folder</string>
+    <string name="miescuela">miescuela</string>
 </resources>
